@@ -1,0 +1,160 @@
+/* ------------------------------------------------------------------------- */
+/*                             Global variables                              */
+/* ------------------------------------------------------------------------- */
+
+:root {
+    /* Magic numbers */
+    --title-container-height: 95px;
+    --menu-navigation-container-height: 63px;
+    --submenu-navigation-container-height: 63px;
+    --footer-height: 95px;
+
+    /* Colors */
+    --layout-separator: #5c636b;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                  Reset                                    */
+/* ------------------------------------------------------------------------- */
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 10px;
+    font-family: 'Rajdhani';
+    font-weight: 300;
+}
+
+body {
+    color: #fff;
+    background-size: cover;
+    background-color: #28282a;
+    background-image: url('/images/backgrounds/background_nuke.jpg');
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                               Page content                                */
+/* ------------------------------------------------------------------------- */
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                 Fonts                                     */
+/* ------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: Rajdhani;
+    font-weight: 200;
+    src: url('/fonts/Rajdhani-Light.ttf');
+}
+
+@font-face {
+    font-family: Rajdhani;
+    font-weight: 300;
+    src: url('/fonts/Rajdhani-Regular.ttf');
+}
+
+@font-face {
+    font-family: Rajdhani;
+    font-weight: 400;
+    src: url('/fonts/Rajdhani-Medium.ttf');
+}
+
+@font-face {
+    font-family: Rajdhani;
+    font-weight: 600;
+    src: url('/fonts/Rajdhani-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Rajdhani;
+    font-weight: 700;
+    src: url('/fonts/Rajdhani-Bold.ttf');
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                 Other                                     */
+/* ------------------------------------------------------------------------- */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nodrag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                 Scrollbar                                 */
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (min-device-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #747575;
+        border: 0;
+        border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #adaca8;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #adaca8;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "CS:GO Config Generator",
+    "short_name": "CS:GO Config",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#1d2c49",
+    "background_color": "#1d2c49",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
