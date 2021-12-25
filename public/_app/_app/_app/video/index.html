@@ -2,55 +2,55 @@
 <html lang="en">
     <head>
         <title>CS:GO Config Generator</title>
-
+        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
         <meta name="theme-color" content="#1d2c49" />
         <meta name="color-scheme" content="light" />
         <meta name="description" content="Create an autoexec config file from your CS:GO settings." />
         <meta property="og:site_name" content="CS:GO Config Generator" />
-        <meta property="og:image" content="/images/thumbnail.jpg" />
+        <meta property="og:image" content="./images/thumbnail.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:image" content="/images/thumbnail.jpg" />
+        <meta property="twitter:image" content="./images/thumbnail.jpg" />
         <meta name="apple-mobile-web-app-title" content="CS:GO Config Generator" />
         <meta name="application-name" content="CS:GO Config Generator" />
-        <meta name="msapplication-TileColor" content="#1d2c49" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-config" content="./browserconfig.xml" />
+        <link rel="manifest" href="./manifest.json" />
 
         <!-- Global stylesheet -->
-        <link rel="stylesheet" href="/global.css" />
-
+        <link rel="stylesheet" href="./global.css" />
+        
         <!-- Icons -->
-        <link rel="shortcut icon" href="/icons/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-        <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
+        <link rel="shortcut icon" href="./icons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#1d2c49" />
+        <meta name="msapplication-TileImage" content="./icons/mstile-144x144.png" />
 
         
 
 		
 
-		<link rel="modulepreload" href="/_app/start-54e64e66.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-68caf92a.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-8f5b7b6c.js">
-		<link rel="modulepreload" href="/_app/chunks/stores-e24a5853.js">
-		<link rel="modulepreload" href="/_app/pages/video.svelte-d38d04ef.js">
-		<link rel="modulepreload" href="/_app/chunks/Select-d95bde51.js">
-		<link rel="modulepreload" href="/_app/chunks/LinkedSliderAndPercentage-dc84995e.js">
-		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-4deff49c.css">
-		<link rel="stylesheet" href="/_app/assets/Select-46ab1ac3.css">
-		<link rel="stylesheet" href="/_app/assets/LinkedSliderAndPercentage-30f8b7e3.css">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/start-bcc9ed76.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/chunks/vendor-68caf92a.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/pages/__layout.svelte-122bd8c3.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/chunks/stores-e24a5853.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/pages/video.svelte-d38d04ef.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/chunks/Select-d95bde51.js">
+		<link rel="modulepreload" href="/csgo-cfg-generator/_app/chunks/LinkedSliderAndPercentage-dc84995e.js">
+		<link rel="stylesheet" href="/csgo-cfg-generator/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/csgo-cfg-generator/_app/assets/pages/__layout.svelte-4deff49c.css">
+		<link rel="stylesheet" href="/csgo-cfg-generator/_app/assets/Select-46ab1ac3.css">
+		<link rel="stylesheet" href="/csgo-cfg-generator/_app/assets/LinkedSliderAndPercentage-30f8b7e3.css">
 
 		<script type="module">
-			import { start } from "/_app/start-54e64e66.js";
+			import { start } from "/csgo-cfg-generator/_app/start-bcc9ed76.js";
 			start({
 				target: document.querySelector("#app"),
-				paths: {"base":"","assets":""},
+				paths: {"base":"/csgo-cfg-generator","assets":""},
 				session: {},
 				host: location.host,
 				route: true,
@@ -60,8 +60,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-8f5b7b6c.js"),
-						import("/_app/pages/video.svelte-d38d04ef.js")
+						import("/csgo-cfg-generator/_app/pages/__layout.svelte-122bd8c3.js"),
+						import("/csgo-cfg-generator/_app/pages/video.svelte-d38d04ef.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -73,25 +73,33 @@
 			});
 		</script>
 
-        <!-- Service worker- -->
-        <script defer src="/service-worker.js"></script>
+        <!-- Service worker -->
         <script>
             if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker
-                        .register('service-worker.js')
-                        .then(
-                            function (registration) {},
-                            function (error) {}
-                        )
-                        .catch(error => console.error(error));
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('service-worker.js').then(
+                        function (registration) {
+                            // Registration was successful
+                            //console.log('Registered!');
+                        },
+                        function (err) {
+                            // Registration failed
+                            //console.log('ServiceWorker registration failed: ', err);
+                        }
+                    ).catch(err => console.log(err));
                 });
-            } else console.log('Service worker is not supported');
+            }
+            else 
+                console.log('Service worker is not supported');
         </script>
+        <script defer src="./service-worker.js"></script>
     </head>
     <body>
         <noscript>
-            <strong> Sorry. This website won't work without Javascript. Please enable it. </strong>
+            <strong>
+                Désolé, le site ne fonctionne pas sans Javascript. 
+                Merci de l'activer pour continuer.
+            </strong>
         </noscript>
 
         <div id="app">
