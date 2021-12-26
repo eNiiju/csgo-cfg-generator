@@ -122,7 +122,7 @@ const defaultSettings = {
             gotv_caster_volume: '100',
             audio_output_configuration: '0',
             advanced_3d_audio_processing: '0',
-            enable_voice: '0',
+            enable_voice: '1',
             voip_volume: '100',
             voip_positional: '0',
             play_audio_when_game_in_background: '0'

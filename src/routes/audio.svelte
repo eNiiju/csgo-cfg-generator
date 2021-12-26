@@ -76,11 +76,11 @@
             options={[
                 {
                     name: 'Disabled',
-                    value: '1'
+                    value: '0'
                 },
                 {
                     name: 'Press to Use Mic',
-                    value: '0'
+                    value: '1'
                 }
             ]}
         />
