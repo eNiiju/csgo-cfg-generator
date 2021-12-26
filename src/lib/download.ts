@@ -3,7 +3,7 @@ import { settings } from '../stores';
 export function downloadConfig() {
     const config = `\
 // ------------------------------------------------------------------------- //
-//                              Initialisation                               //
+//                              Initialization                               //
 // ------------------------------------------------------------------------- //
 
 // Unbind all keys
