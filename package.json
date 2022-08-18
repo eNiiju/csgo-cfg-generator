@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "deploy": "git subtree push --prefix public/ origin gh-pages",
         "dev": "svelte-kit dev --host",
         "build": "svelte-kit build",
         "package": "svelte-kit package",

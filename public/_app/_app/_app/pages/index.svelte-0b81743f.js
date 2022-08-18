@@ -1,1 +1,0 @@
-import{S as e,i as o,s as t,A as a}from"../chunks/vendor-68caf92a.js";function i(n){return a(()=>{window.location.href="/video"}),[]}class u extends e{constructor(s){super();o(this,s,i,null,t,{})}}export{u as default};

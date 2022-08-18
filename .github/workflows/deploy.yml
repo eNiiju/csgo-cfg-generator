@@ -1,0 +1,26 @@
+name: Build & deploy to gh-pages
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        concurrency: ci-${{ github.ref }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Configure Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '18.4.0'
+            - name: Install
+              run: |
+                npm ci
+                npm run build
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: public
+                branch: gh-pages
