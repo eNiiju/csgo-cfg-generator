@@ -1,6 +1,8 @@
 import preprocess from 'svelte-preprocess';
 import adapter from 'svelte-adapter-github';
 
+const dev = process.env.NODE_ENV === 'development';
+
 /**
  * @type {import('@sveltejs/kit').Config}
  */
@@ -11,10 +13,13 @@ export default {
         adapter: adapter({
             pages: 'public',
             assets: 'public',
-            fallback: null
+            domain: null,
+            jekyll: false,
+            fallback: null,
+            precompress: false
         }),
         paths: {
-            base: '/csgo-cfg-generator'
+            base: dev ? '' : '/csgo-cfg-generator'
         }
     }
 };
