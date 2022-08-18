@@ -1,12 +1,49 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
     import { selectedMenu } from '../stores';
     import MenuTransition from '../components/transitions/MenuTransition.svelte';
 
     import MenuNavigation from '../components/layout/MenuNavigation.svelte';
     import SubmenuNavigation from '../components/layout/SubmenuNavigation.svelte';
     import FooterContent from '../components/layout/FooterContent.svelte';
+
+    onMount(() => {
+        // Reload confirmation
+        window.onbeforeunload = () => {
+            return '';
+        };
+    });
 </script>
+
+<svelte:head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
+    <meta name="theme-color" content="#1d2c49" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Create an autoexec config file from your CS:GO settings." />
+    <meta property="og:site_name" content="CS:GO Config Generator" />
+    <meta property="og:image" content="/images/thumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content={`${base}/images/thumbnail.jpg`} />
+    <meta name="apple-mobile-web-app-title" content="CS:GO Config Generator" />
+    <meta name="application-name" content="CS:GO Config Generator" />
+    <meta name="msapplication-TileColor" content="#1d2c49" />
+    <meta name="msapplication-config" content={`${base}/browserconfig.xml`} />
+    <link rel="manifest" href={`${base}/manifest.json`} />
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href={`${base}/global.css`} />
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}/icons/favicon-16x16.png`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}/icons/favicon-32x32.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}/icons/apple-touch-icon.png`} />
+    <meta name="msapplication-TileImage" content={`${base}/icons/mstile-144x144.png`} />
+</svelte:head>
 
 <div class="main-container">
     <div class="title-container">
