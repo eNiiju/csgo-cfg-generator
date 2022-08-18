@@ -1,0 +1,1 @@
+import{S as n,i as o,s as t,A as a}from"../chunks/vendor-e0f03637.js";import{b as r}from"../chunks/paths-28a87002.js";function i(s){return a(()=>{window.location.href=`${r}/video`}),[]}class f extends n{constructor(e){super();o(this,e,i,null,t,{})}}export{f as default};
