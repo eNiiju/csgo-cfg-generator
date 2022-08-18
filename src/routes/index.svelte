@@ -2,6 +2,6 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
-        window.location.href = '/video';
+        window.location.href = '/csgo-cfg-generator/video';
     });
 </script>
