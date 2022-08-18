@@ -4,7 +4,8 @@
     import { selectedMenu, selectMenu } from '../../stores';
 
     onMount(() => {
-        selectMenu(window.location.pathname.split('/')[1]);
+        const s = window.location.pathname.split('/')[1]
+        selectMenu(s[s.length - 1]);
 
         // On menu link click : update selected menu
         const menuLinks = Array.from(document.querySelectorAll('.menu-navigation a'));
