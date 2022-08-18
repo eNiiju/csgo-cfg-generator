@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount, createEventDispatcher } from 'svelte';
+    import { base } from '$app/paths';
     import type { SettingInfos } from 'src/types';
     import { getSettingValue, setSettingValue } from '../../stores';
 
@@ -63,7 +64,7 @@
     {#key selectedValue}
         <div class="selected" on:click={handleSelectedItemClick}>
             {options.find(option => getSettingValue(settingInfos) === option.value.toString())?.name}
-            <img src="/images/icons/dropdown-arrow-icon.svg" alt="Dropdown arrow icon" />
+            <img src={`${base}/images/icons/dropdown-arrow-icon.svg`} alt="Dropdown arrow icon" />
         </div>
     {/key}
 

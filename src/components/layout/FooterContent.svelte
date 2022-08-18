@@ -1,11 +1,12 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import { downloadConfig } from '../../lib/download';
     import Button from '../customInputs/Button.svelte';
 </script>
 
 <div class="footer-content">
-    <Button text="Download .cfg" iconPath="/images/icons/download-icon.svg" on:buttonClick={downloadConfig} />
-    <Button text="Reset Defaults" iconPath="/images/icons/reset-icon.svg" on:buttonClick={() => window.location.reload()} />
+    <Button text="Download .cfg" iconPath={`${base}/images/icons/download-icon.svg`} on:buttonClick={downloadConfig} />
+    <Button text="Reset Defaults" iconPath={`${base}/images/icons/reset-icon.svg`} on:buttonClick={() => window.location.reload()} />
 </div>
 
 <style>

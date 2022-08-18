@@ -13,6 +13,8 @@
         window.onbeforeunload = () => {
             return '';
         };
+
+        (document.querySelector('body') as HTMLElement).style.setProperty('background-image', `url(${base}/images/backgrounds/background_nuke.jpg)`);
     });
 </script>
 
@@ -23,7 +25,7 @@
     <meta name="color-scheme" content="light" />
     <meta name="description" content="Create an autoexec config file from your CS:GO settings." />
     <meta property="og:site_name" content="CS:GO Config Generator" />
-    <meta property="og:image" content="/images/thumbnail.jpg" />
+    <meta property="og:image" content={`${base}/images/thumbnail.jpg`} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -38,11 +40,16 @@
     <link rel="stylesheet" href={`${base}/global.css`} />
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link rel="shortcut icon" href={`${base}/icons/favicon.ico`} />
     <link rel="icon" type="image/png" sizes="16x16" href={`${base}/icons/favicon-16x16.png`} />
     <link rel="icon" type="image/png" sizes="32x32" href={`${base}/icons/favicon-32x32.png`} />
     <link rel="apple-touch-icon" sizes="180x180" href={`${base}/icons/apple-touch-icon.png`} />
     <meta name="msapplication-TileImage" content={`${base}/icons/mstile-144x144.png`} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </svelte:head>
 
 <div class="main-container">

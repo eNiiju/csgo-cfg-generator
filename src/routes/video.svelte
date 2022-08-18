@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import SettingsGroup from '../components/layout/SettingsGroup.svelte';
     import Setting from '../components/layout/Setting.svelte';
     import SettingSeparator from '../components/layout/SettingSeparator.svelte';
@@ -15,7 +16,7 @@
             backgroundName = backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
         } else backgroundName = value;
 
-        document.body.style.backgroundImage = `url(/images/backgrounds/background_${backgroundName}.jpg)`;
+        document.body.style.backgroundImage = `url(${base}/images/backgrounds/background_${backgroundName}.jpg)`;
     }
 </script>
 

@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     export let checked = false;
 
     function handleClick() {
@@ -11,7 +12,7 @@
     }
 </script>
 
-<div class="csgo-checkbox{checked ? ' checked' : ''}" on:click={handleClick}>
+<div class="csgo-checkbox{checked ? ' checked' : ''}" on:click={handleClick} style={`--url-checkbox-checked: '${base}/images/icons/checked-icon.svg'`}>
     <input type="checkbox" {checked} />
 </div>
 
@@ -28,7 +29,7 @@
     }
 
     .csgo-checkbox.checked {
-        background-image: url('/images/icons/checked-icon.svg');
+        background-image: url(--url-checkbox-checked);
     }
 
     .csgo-checkbox input[type='checkbox'] {

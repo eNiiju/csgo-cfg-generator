@@ -4,22 +4,6 @@
         <title>CS:GO Config Generator</title>
 
         %svelte.head%
-
-        <!-- Service worker- -->
-        <script defer src="/service-worker.js"></script>
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker
-                        .register('service-worker.js')
-                        .then(
-                            function (registration) {},
-                            function (error) {}
-                        )
-                        .catch(error => console.error(error));
-                });
-            } else console.log('Service worker is not supported');
-        </script>
     </head>
     <body>
         <noscript>

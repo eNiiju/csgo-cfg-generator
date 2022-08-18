@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
     import type { SettingInfos } from 'src/types';
     import { getSettingValue, setSettingValue } from '../../stores';
 
@@ -34,7 +35,7 @@
 
 <div class="csgo-keybind">
     <input type="text" {value} bind:this={inputText} on:focus={handleInputTextFocus} on:input={handleInput} />
-    <img bind:this={crossIcon} src="/images/icons/cross-icon.svg" alt="Cross icon" class="noselect nodrag" />
+    <img bind:this={crossIcon} src={`${base}/images/icons/cross-icon.svg`} alt="Cross icon" class="noselect nodrag" />
 </div>
 
 <style>

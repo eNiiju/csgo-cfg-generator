@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     export let name: string;
     export let href: string;
 </script>
 
 <a class="csgo-external-link noselect" {href} target="_blank">
-    <img src="/images/icons/external-link-icon.svg" alt="External link icon" class="nodrag" />
+    <img src={`${base}/images/icons/external-link-icon.svg`} alt="External link icon" class="nodrag" />
     <span class="external-link-name">{name}</span>
 </a>
 
