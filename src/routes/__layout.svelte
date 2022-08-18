@@ -33,8 +33,6 @@
     <meta name="apple-mobile-web-app-title" content="CS:GO Config Generator" />
     <meta name="application-name" content="CS:GO Config Generator" />
     <meta name="msapplication-TileColor" content="#1d2c49" />
-    <meta name="msapplication-config" content={`${base}/browserconfig.xml`} />
-    <link rel="manifest" href={`${base}/manifest.json`} />
 
     <!-- Global stylesheet -->
     <link rel="stylesheet" href={`${base}/global.css`} />
