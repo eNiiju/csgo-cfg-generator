@@ -12,6 +12,9 @@ export default {
             pages: 'public',
             assets: 'public',
             fallback: null
-        })
+        }),
+        paths: {
+            base: '/csgo-cfg-generator'
+        }
     }
 };

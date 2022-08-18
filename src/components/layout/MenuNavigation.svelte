@@ -9,7 +9,7 @@
         const menuLinks = Array.from(document.querySelectorAll('.menu-navigation a'));
         for (const menuLink of menuLinks) {
             menuLink.addEventListener('click', () => {
-                selectMenu(menuLink.getAttribute('href').split('/')[1]);
+                selectMenu(menuLink.getAttribute('href').split('/')[2]);
             });
         }
     });
@@ -18,19 +18,19 @@
 <nav class="menu-navigation">
     <ul>
         <li class={$selectedMenu === 'video' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/video">Video</a>
+            <a class="noselect nodrag" href="/csgo-cfg-generator/video">Video</a>
         </li>
 
         <li class={$selectedMenu === 'audio' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/audio">Audio</a>
+            <a class="noselect nodrag" href="/csgo-cfg-generator/audio">Audio</a>
         </li>
 
         <li class={$selectedMenu === 'game' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/game">Game</a>
+            <a class="noselect nodrag" href="/csgo-cfg-generator/game">Game</a>
         </li>
 
         <li class={$selectedMenu === 'keyboard-mouse' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/keyboard-mouse">Keyboard / Mouse</a>
+            <a class="noselect nodrag" href="/csgo-cfg-generator/keyboard-mouse">Keyboard / Mouse</a>
         </li>
     </ul>
 </nav>
