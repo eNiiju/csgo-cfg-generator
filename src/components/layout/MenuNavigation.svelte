@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
     import { selectedMenu, selectMenu } from '../../stores';
 
     onMount(() => {
@@ -9,7 +10,8 @@
         const menuLinks = Array.from(document.querySelectorAll('.menu-navigation a'));
         for (const menuLink of menuLinks) {
             menuLink.addEventListener('click', () => {
-                selectMenu(menuLink.getAttribute('href').split('/')[2]);
+                const s = menuLink.getAttribute('href').split('/')
+                selectMenu(s[s.length - 1]);
             });
         }
     });
@@ -18,19 +20,19 @@
 <nav class="menu-navigation">
     <ul>
         <li class={$selectedMenu === 'video' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/csgo-cfg-generator/video">Video</a>
+            <a class="noselect nodrag" href={`${base}/video`}>Video</a>
         </li>
 
         <li class={$selectedMenu === 'audio' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/csgo-cfg-generator/audio">Audio</a>
+            <a class="noselect nodrag" href={`${base}/audio`}>Audio</a>
         </li>
 
         <li class={$selectedMenu === 'game' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/csgo-cfg-generator/game">Game</a>
+            <a class="noselect nodrag" href={`${base}/game`}>Game</a>
         </li>
 
         <li class={$selectedMenu === 'keyboard-mouse' ? 'active' : ''}>
-            <a class="noselect nodrag" href="/csgo-cfg-generator/keyboard-mouse">Keyboard / Mouse</a>
+            <a class="noselect nodrag" href={`${base}/keyboard-mouse`}>Keyboard / Mouse</a>
         </li>
     </ul>
 </nav>

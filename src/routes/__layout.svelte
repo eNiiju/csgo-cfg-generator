@@ -6,13 +6,6 @@
     import MenuNavigation from '../components/layout/MenuNavigation.svelte';
     import SubmenuNavigation from '../components/layout/SubmenuNavigation.svelte';
     import FooterContent from '../components/layout/FooterContent.svelte';
-
-    onMount(() => {
-        // Reload confirmation
-        window.onbeforeunload = () => {
-            return '';
-        };
-    });
 </script>
 
 <div class="main-container">
