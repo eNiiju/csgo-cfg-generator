@@ -5,7 +5,7 @@
 
     onMount(() => {
         const s = window.location.pathname.split('/')
-        selectMenu(s[s.length - 1]);
+        selectMenu(s[s[s.length - 1] === '' ? s.length - 2 : s.length - 1]);
 
         // On menu link click : update selected menu
         const menuLinks = Array.from(document.querySelectorAll('.menu-navigation a'));
