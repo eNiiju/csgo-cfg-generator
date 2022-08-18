@@ -1,1 +1,0 @@
-import{S as o,i as s,s as t,A as a}from"../chunks/vendor-68caf92a.js";function r(e){return a(()=>{window.location.href="/csgo-cfg-generator/video"}),[]}class i extends o{constructor(n){super();s(this,n,r,null,t,{})}}export{i as default};
